@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Два типа вывода информации</title>
+  <link rel="stylesheet" href="css.css">
+  <style>
+
+  </style>
+  <script>
+    // Автоматический вывод результата
+    function showDescAuto(text) {
+      document.getElementById('outputAuto').value = text;
+    }
+
+    // Ручной вывод результата
+    function showDescManual() {
+      const radios = document.getElementsByName('seasonManual');
+      let selected = null;
+      for (let radio of radios) {
+        if (radio.checked) selected = radio.value;
+      }
+
+      if (selected) {
+        document.getElementById('outputManual').value = selected;
+      } else {
+        alert("Пожалуйста, выберите сезон!");
+      }
+    }
+  </script>
+</head>
+<body>
+      <nav>
+      <h1>
+         Итоговая работа по информатике
+      </h1>
+      <a href="index.html">Главная</a>
+      <a href="school.html">Я учусь</a>
+      <a href="hobby.html">О хобби</a>
+      <a href="vacation.html">Я на отдыхе</a>
+      <a href="interface.html">ПР Интерфейс</a>
+   </nav>
+
+
+
+  <div class="interface">
+    <h2>Интерфейс 1 — Автоматический вывод</h2>
+
+    <input type="radio" name="seasonAuto" onclick="showDescAuto('Июнь, Июль, Август')"> Лето<br>
+    <input type="radio" name="seasonAuto" onclick="showDescAuto('Декабрь, Январь, Февраль')"> Зима<br>
+    <input type="radio" name="seasonAuto" onclick="showDescAuto('Март, Апрель, Май')"> Весна<br>
+    <input type="radio" name="seasonAuto" onclick="showDescAuto('Сентябрь, Октябрь, Ноябрь')"> Осень<br>
+
+    <textarea id="outputAuto" rows="3" readonly></textarea>
+  </div>
+
+  <!-- Второй интерфейс - ручной вывод -->
+  <div class="interface">
+    <h2>Интерфейс 2 — Ручной вывод</h2>
+
+    <input type="radio" name="seasonManual" value="Июнь, Июль, Август"> Лето<br>
+    <input type="radio" name="seasonManual" value="Декабрь, Январь, Февраль"> Зима<br>
+    <input type="radio" name="seasonManual" value="Март, Апрель, Май"> Весна<br>
+    <input type="radio" name="seasonManual" value="Сентябрь, Октябрь, Ноябрь"> Осень<br><br>
+
+    <button onclick="showDescManual()">Вывести результат</button>
+
+    <textarea id="outputManual" rows="3" readonly></textarea>
+  </div>
+
+     <impresum>
+      <p>
+         Александр Ленерт, 2025 год<br>
+         Рязанский колледж электроники<br>
+      </p>
+   </impresum>
+
+</body>
+</html>

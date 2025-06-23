@@ -1,0 +1,62 @@
+nav{
+   text-align: center;
+   font-family: Arial;
+   background-color: aqua;
+   margin-bottom: 20px;
+   
+}
+
+body{
+   background-color: aquamarine;
+}
+
+nav,a{
+   padding: 10px;
+}
+
+text{
+   
+   margin-left: 20px;
+   float: left;
+   width: 65%;
+   background-color: rgb(0, 242, 255);
+   font-size: 150%;
+   text-align: center;
+   padding: 10px;
+  
+}
+
+imga{
+   margin-right: 20px;
+   float: right;
+   width: 30%;
+}
+
+
+
+body { 
+   font-family: Arial, sans-serif; 
+   padding: 20px; 
+}
+
+.interface {
+   border: 1px solid #ccc; 
+   padding: 15px; 
+   margin-bottom: 20px; 
+   border-radius: 8px; 
+}
+textarea {
+   width: 100%; 
+   margin-top: 10px; 
+}
+h2 { 
+   margin-top: 0; 
+}
+
+impresum{
+   text-align: center;
+   margin: 100px;
+   width: 65%;
+   font-size: 20px;
+}
+
